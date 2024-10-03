@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
-
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
+import { IonicModule } from '@ionic/angular'; // Importa IonicModule
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductListComponent } from './product-list/product-list.component'; // Asegúrate de que la ruta sea correcta
+import { ProductService } from './product.service'; // Importa el servicio
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
+  declarations: [
+    AppComponent,
+    ProductListComponent // Asegúrate de que este componente esté aquí
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    IonicModule.forRoot() // Añade IonicModule aquí
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
