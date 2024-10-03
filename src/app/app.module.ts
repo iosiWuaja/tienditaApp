@@ -16,6 +16,7 @@ import { ProductService } from './product.service'; // Importa el servicio
     AppRoutingModule,
     IonicModule.forRoot() // Añade IonicModule aquí
   ],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
