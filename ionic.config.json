@@ -1,0 +1,7 @@
+{
+  "name": "tienditaApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
